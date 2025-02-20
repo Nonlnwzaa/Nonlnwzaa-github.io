@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to INTANON888</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            overflow: hidden;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #333;
+            animation: fadeIn 1.5s;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .profile {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+            animation: fadeIn 1.5s;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #007BFF;
+        }
+        .profile h2 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .profile p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 400px;
+            margin: 10px auto;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <audio autoplay loop>
+        <source src="background.mp3" type="audio/mpeg">
+    </audio>
+</head>
+<body>
+    <h1>Welcome to INTANON888</h1>
+    <input type="text" id="nickname" placeholder="ใส่ชื่อเล่นของคุณ">
+    <button onclick="redirectToPage()">ไปยังหน้าของคุณ</button>
+
+    <div id="profile" class="profile">
+        <img id="profileImage" src="" alt="Profile Image">
+        <h2 id="profileName"></h2>
+        <p id="wishMessage"></p>
+    </div>
+
+    <script>
+        const users = {
+            "ซัน": "ซัน.html",
+            "พล": "พล.html",
+            "ฟ่าง": "ฟ่าง.html",
+            "ปุญ": "ปุญ.html",
+            "ชิม่อน": "ชิม่อน.html",
+            "ป้อน": "ป้อน.html",
+            "อุ้ม": "อุ้ม.html",
+            "เกรท": "เกรท.html",
+            "มายด์": "มายด์.html",
+            "เก้า": "เก้า.html",
+            "น้ำใส": "น้ำใส.html",
+            "น้ำ": "น้ำ.html",
+            "ตะวัน": "ตะวัน.html",
+            // เพิ่มชื่อและลิงก์หน้าตามต้องการ
+        };
+
+        function redirectToPage() {
+            const nickname = document.getElementById('nickname').value;
+            const page = users[nickname];
+
+            if (page) {
+                window.location.href = page;
+            } else {
+                alert("ไม่พบชื่อเล่นนี้");
+            }
+        }
+    </script>
+</body>
+</html>
