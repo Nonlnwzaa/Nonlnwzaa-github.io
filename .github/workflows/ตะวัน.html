@@ -1,0 +1,55 @@
+<!-- ตัวอย่างโครงสร้างของเว็บแต่ละคน -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตะวัน - ปัจฉิมนิเทศ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            animation: fadeIn 1.5s;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #007BFF;
+            animation: fadeIn 2s;
+        }
+        p {
+            font-size: 1.5em;
+            color: #555;
+            max-width: 500px;
+            margin-top: 20px;
+            animation: fadeIn 2.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <audio autoplay loop>
+        <source src="sun-theme.mp3" type="audio/mpeg">
+    </audio>
+</head>
+<body>
+    <h1>ตะวัน - ปัจฉิมนิเทศ</h1>
+    <img src="ตะวัน.jpg" alt="รูปของอ้ม">
+    <p>"เปล่งประกายเหมือนกับชื่อของตัวเอง ขอให้เป็นแสงสว่างให้กับตัวเองและคนรอบข้าง ขอให้ชีวิตเต็มไปด้วยความสุข และก้าวไปสู่อนาคตที่สดใสและสมหวัง!"</p>
+</body>
+</html>
